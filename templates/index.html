@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ msg }}</h1>
+<form action="" method="post" id="form">
+    <a href="login/">Войти</a>
+    <input type="email" name="email" placeholder="Email">
+    <input name="login" placeholder="логин" minlength="5">
+    <input name="password" placeholder="пароль" minlength="6">
+    <input placeholder="повторите пароль">
+    <button>Зарегистрироваться</button>
+</form>
+</body>
+<script>
+    let els = document.getElementsByTagName('input')
+    let inputs = form.querySelectorAll('input')
+
+    form.onsubmit = (e) => {
+        if (els[2].value !== els[3].value) {
+            e.preventDefault()
+            alert('Пароли не совпадают')
+        }
+        if (els[0].value.replaceAll(' ', '') === '' || els[1].value.replaceAll(' ', '') === "" || els[2].value.replaceAll(' ', '') === "") {
+            e.preventDefault()
+            alert('Поле не должно быть пустым')
+        }
+        if (inputs[1].value < 5) {
+            e.preventDefault()
+            alert('Логин должен содержать не менее 5 символов')
+        }
+
+        if (inputs[2].value < 6) {
+            e.preventDefault()
+            alert('Пароль должен содержать не менее 6 символов')
+        }
+
+        if (!/^(?=.*[a-zA-Z])(?=.*\d).+$/.test(inputs[2].value)) {
+            e.preventDefault();
+            alert('Пароль должен содержать и цифры и буквы');
+        }
+        if (!/^\S+@\S+\.\S+$/.test(inputs[0].value)) {
+            e.preventDefault();
+            alert('Введите корректный email');
+        }
+
+    }
+</script>
+</html>
