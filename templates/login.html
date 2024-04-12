@@ -1,9 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Вход</title>
 </head>
+<style>
+    body {
+        background-image: url('../static/img/jojo_login.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 30px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 30px;
+    }
+
+    input, button {
+        margin: 5px;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+</style>
 <body>
 <form action="" method="post">
     <a href="http://localhost:8000/">Регистрация</a>
@@ -11,6 +40,6 @@
     <input placeholder="пароль" name="password" type="password">
     <button>Войти</button>
 </form>
-<h1>{{ msg }}</h1>
+<h1 style="color: white; background-color: rgba(255, 255, 255, 0.5)">{{ msg }}</h1>
 </body>
 </html>
