@@ -19,14 +19,5 @@
         </library>
       </libraries>
     </data-source>
-    <data-source source="LOCAL" name="Django default" uuid="7389d8b4-868e-487c-a4d7-87dab5d860e2">
-      <driver-ref>sqlite.xerial</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>$PROJECT_DIR$/examProject/settings.py</remarks>
-      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:C:\Users\user\PycharmProjects\examProject\db.sqlite3</jdbc-url>
-      <working-dir>$ProjectFileDir$</working-dir>
-    </data-source>
   </component>
 </project>

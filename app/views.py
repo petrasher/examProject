@@ -30,8 +30,7 @@ def login(request):
                     html = redirect('/profile/')
                     html.set_cookie('isAuth', 'true')
                     return html
-                return render(request, 'login.html', {'msg': 'Неверный логин или пароль'})
-            return render(request, 'login.html')
+            return render(request, 'login.html', {'msg': 'Неверный логин или пароль'})
         return render(request, 'login.html')
 
 
