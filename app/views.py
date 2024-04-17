@@ -51,7 +51,6 @@ def profile(request):
         return html
     try:
         if request.COOKIES.get('isAuth') == 'true':
-            # Получение логина и email текущего пользователя из cookies
             current_user_login = request.COOKIES.get('user_login')
             current_user_email = request.COOKIES.get('user_email')
 
