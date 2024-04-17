@@ -6,6 +6,13 @@
     <title>Личный кабинет</title>
 </head>
 <style>
+    h1 {
+      background: linear-gradient(to right, red, blue);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+        
     body {
         background-image: url('../static/img/jojo_profile.jpg');
         background-size: cover;
@@ -29,7 +36,7 @@
         background-color: black;
         padding: 20px;
         border-radius: 30px;
-        margin-top: 100px; 
+        margin-top: 10px; 
         margin-left: 500px;
     }
 
@@ -49,10 +56,12 @@
     }
 </style>
 <body>
-<h1 style="color: black;margin-left: 500px;" >Узнай кто ты из -"ДжоДжо"</h1>
-<form id="logoutForm" action="" method="post">
+<form style="margin-left: 500px" id="logoutForm" action="" method="post">
     <button>Выйти</button>
 </form>
+<h2 style="margin-left: 200px">Ваш Email: {{ email }}</h2>
+<h2 style="margin-left: 200px">Ваш Login: {{ login }}</h2>
+<h1 style="margin-left: 500px;" >Узнай кто ты из -"ДжоДжо"</h1>
 
 <form id="randomImageForm" action="" method="post">
     <button type="button" onclick="getRandomImage()">СТАРТ!</button>
